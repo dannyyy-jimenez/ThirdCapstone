@@ -86,7 +86,7 @@ The landing page for the flask app is available through [this link](https://d1kx
 
 The app is only available through Expo Go at this point for a demo video [click here]()
 
-![App](./plots/app_.png)
+![App](./plots/app_screen.png)
 
 ------
 
