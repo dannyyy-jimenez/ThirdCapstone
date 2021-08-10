@@ -26,7 +26,11 @@ pretty_classes = {
 }
 
 classes = ['airconditioner', 'carhorn', 'childrenplaying', 'dogbark', 'drilling', 'engineidling', 'gunshot', 'jackhammer', 'siren', 'street_music', 'other']
+<<<<<<< HEAD
 danger_idxs = [1, 3, 4, 6, 7, 8]
+=======
+danger_idxs = [1, 3, 4, 6, 8]
+>>>>>>> ef84c4f46011b47d17d84f2944c57cb287c1915a
 
 
 class Wavv():

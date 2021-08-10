@@ -13,7 +13,6 @@
 ---
 
 #### This project was created using Python, JavaScript, and PostgreSQL. Hosted through AWS in an EC2 instance.
-
 The backend uses [Flask](https://flask.palletsprojects.com/en/2.0.x/), the Mobile app is made on [React Native](https://reactnative.dev/) and [Expo](https://expo.dev/). The Front end was programmed using [React.js](https://reactjs.org/).
 
 ---
@@ -102,38 +101,6 @@ Principal component analysis is a matrix dimension reduction technique that keep
 | 200 x 200          | 32                 | LR on Plateau Early Stopping |
 | __Metric__         | __Classification__ | __Validation Accuracy__      |
 | Accuracy           | Softmax            | 88.1 %                       |
-
-Accuracy is our validation metric, but it __doesn't mean accuracy is everything__. Recall is a very important metric in this project because we don't want to report fake danger when there isn't any.
-
-Check out the confusion matrix, you'll see that the model rarely confuses "other" for any of the dangerous sounds, this is really good!
-
-![Confusion Matrix](./plots/conv_conf_other.png)
-
-
-#### Pixel Importance Through Logistic Regression
-Upon using a logistic regression model to make classifications, we can plot out the coefficients from our linear combinations to get the pixels that stand out in each class.
-
-![PI Air Conditioner](./plots/pixel_imp_air_conditioner.png)
-
-![PI Car Horn](./plots/pixel_imp_car_horn.png)
-
-![PI Children Playing](./plots/pixel_imp_children_playing.png)
-
-![PI Dog Bark](./plots/pixel_imp_dog_bark.png)
-
-![PI Drilling](./plots/pixel_imp_drilling.png)
-
-![PI Engine Idling](./plots/pixel_imp_engine_idling.png)
-
-![PI Gun Shot](./plots/pixel_imp_gun_shot.png)
-
-![PI Jackhammer](./plots/pixel_imp_jackhammer.png)
-
-![PI Siren](./plots/pixel_imp_siren.png)
-
-![PI Street Music](./plots/pixel_imp_street_music.png)
-
-*Note: Blue represents pixels that positively impact our prediction, whilst red represents pixels that negatively impact our prediction*
 
 ------
 
