@@ -40,13 +40,33 @@ This dataset consists of the UrbanSound8K dataset plus ~500 .wav files classifie
 
 In order to be able to work with the audio data, all  the *.wav* files were converted to [Mel Spectrograms](https://towardsdatascience.com/getting-to-know-the-mel-spectrogram-31bca3e2d9d0), find out more about their meaning and importance through this article. In summary, Mel Spectrograms hold features of audio that are not available to humans due to the way we process sound. Using some fancy math algorithms the sound is converted to image mel spectrograms. Audio  can be hard to work with but converting it to an image extracts important features and facilitates the process of classification
 
-###### Sample Mel Spectrogram of a Gun Shot
+Live data was extracted through the app implementation by saving all recorded .wav files into the backend/temp folder and from there were classified according to what they were.
+
+##### Classifications?
+
+  * <span style="color:#4BB543">Air Conditioner</span>
+  * <span style="color:#E63B2E">Car Horn</span>
+  * <span style="color:#4BB543">Children Playing</span>
+  * <span style="color:#E63B2E">Dog Bark</span>
+  * <span style="color:#E63B2E">Drilling</span>
+  * <span style="color:#4BB543">Engine Idling</span>
+  * <span style="color:#E63B2E">Gun Shot</span>
+  * <span style="color:#E63B2E">Jackhammer</span>
+  * <span style="color:#E63B2E">Siren</span>
+  * <span style="color:#4BB543">Street Music</span>
+  * <span style="color:#4BB543">Noise</span>
+
+
+##### <span style="color:#E63B2E">*Danger*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4BB543">*Not Danger*</span>
+
+
+##### Sample Mel Spectrogram of a Gun Shot
 
 ![Mel Spectrogram](./plots/72259-1-6-0.wav.png)
 
 *Note: The X-axis represents Time*
 
-###### Principal Component Analysis
+##### Principal Component Analysis
 Principal component analysis is a matrix dimension reduction technique that keeps 95% of the variance in the matrix but reduces in size to perform operations faster and more efficiently.
 
 ![PCA](./plots/pca.png)
@@ -71,12 +91,14 @@ Principal component analysis is a matrix dimension reduction technique that keep
 |--------------------|--------------------|------------------------------|
 | 200 x 200          | 32                 | LR on Plateau Early Stopping |
 | __Metric__         | __Classification__ | __Validation Accuracy__      |
-| Accuracy           | Softmax            | 90.1 %                       |
+| Accuracy           | Softmax            | 88.1 %                       |
 
 ------
 
 ### __Implementation__
 #### Mobile App & Live Audio Feed
+
+The model was deployed on the server and live audio is converted to Base64 encoded strings and sent to the server for classification and prediction. The app uses sessions, through username and phone number, to "authenticate" users. Users can then add their "emergency contacts" through the app, which are stored in a PostgreSQL database. Upon detecting danger, the model sends out real-time notifications to the endangered user's emergency contacts, these notifications are either sent as in-app notifications to registered "emergency contacts" or through SMS using [Twilio's SMS API](https://www.twilio.com/).
 
 The landing page for the flask app is available through [this link](https://d1kx3aye6l7gaf.cloudfront.net/
 )
