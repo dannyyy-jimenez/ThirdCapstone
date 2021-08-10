@@ -44,21 +44,23 @@ Live data was extracted through the app implementation by saving all recorded .w
 
 ##### Classifications?
 
-  * <span style="color:#4BB543">Air Conditioner</span>
-  * <span style="color:#E63B2E">Car Horn</span>
-  * <span style="color:#4BB543">Children Playing</span>
-  * <span style="color:#E63B2E">Dog Bark</span>
-  * <span style="color:#E63B2E">Drilling</span>
-  * <span style="color:#4BB543">Engine Idling</span>
-  * <span style="color:#E63B2E">Gun Shot</span>
-  * <span style="color:#E63B2E">Jackhammer</span>
-  * <span style="color:#E63B2E">Siren</span>
-  * <span style="color:#4BB543">Street Music</span>
-  * <span style="color:#4BB543">Noise</span>
+```diff
++ Air Conditioner
+- Car Horn
++ Children Playing
+- Dog Bark
+- Drilling
++ Engine Idling
+- Gun Shot
+- Jackhammer
+- Siren
++ Street Music
++ Noise
 
 
-##### <span style="color:#E63B2E">*Danger*</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:#4BB543">*Not Danger*</span>
-
+- Danger
++ Not Danger
+```
 
 ##### Sample Mel Spectrogram of a Gun Shot
 
