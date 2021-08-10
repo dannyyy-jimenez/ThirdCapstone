@@ -112,12 +112,12 @@ The model was deployed on the server and live audio is converted to Base64 encod
 The landing page for the flask app is available through [this link](https://d1kx3aye6l7gaf.cloudfront.net/
 )
 
-![Weblink](https://res.cloudinary.com/lgxy/video/upload/c_scale,w_1200,q_100/v1628611359/web_gif.gif)
+![Weblink](https://res.cloudinary.com/lgxy/video/upload/c_scale,w_1200,q_100,e_loop:10000/v1628611359/web_gif.gif)
 
 
 The app is only available through Expo Go at this point for a demo video [click here](https://res.cloudinary.com/lgxy/video/upload/v1628610866/phonetix.mov)
 
-![App](https://res.cloudinary.com/lgxy/video/upload/c_scale,w_500,q_100/v1628611583/app_gif.gif)
+![App](https://res.cloudinary.com/lgxy/video/upload/c_scale,w_500,q_100,e_loop:10000/v1628611583/app_gif.gif)
 
 ------
 
